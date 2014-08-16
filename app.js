@@ -1,7 +1,7 @@
 var express = require('express')
   , path = require('path')
   , routes = require('./routes')
-  , sendgrid = require('sendgrid')(process.env.SENGRID_USERNAME, process.env.SENDRID_PASSWORD);
+  , sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 var app = express();
 
@@ -14,7 +14,13 @@ app.configure(function(){
 });
 
 
+//Routes
 app.get('/', routes.index);
+app.get('/bayamon', function(req, res){
+  res.redirect('/bayamon.html');
+});
+
+//END of Routes
 
 app.post('/send_email', function(req, res) {  
       sendgrid.send({
