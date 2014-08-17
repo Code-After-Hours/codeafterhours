@@ -16,9 +16,6 @@ app.configure(function(){
 
 //Routes
 app.get('/', routes.index);
-app.get('/bayamon', function(req, res){
-  res.redirect('/bayamon.html');
-});
 
 //END of Routes
 

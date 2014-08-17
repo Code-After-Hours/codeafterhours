@@ -16,8 +16,8 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-    outline: 0;
-    color: #26AF5F;
+    outline: 1;
+    color: #fff;
 }
 
 h1,
